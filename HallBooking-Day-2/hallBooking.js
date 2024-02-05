@@ -18,6 +18,8 @@ let rooms = [{
     price:"80"
 }];
 
+// Creating Room
+
 HTTP_SERVER.post("/create/room", (req, res) => {
     console.log(req.body);
     const room = req.body;
@@ -38,6 +40,8 @@ HTTP_SERVER.post("/create/room", (req, res) => {
         });
     }
 });
+
+// View Room Details
 
 HTTP_SERVER.get("/view/room", (req, res) =>{
     res.status(200).json({
@@ -73,6 +77,8 @@ let customers = [
           }
       ] }
 ];
+
+// Booking Room
 
 HTTP_SERVER.post("/create/book/:id", (req,res) => {
     try{
@@ -124,6 +130,8 @@ HTTP_SERVER.post("/create/book/:id", (req,res) => {
     }
 })
 
+// Viewing all booked data
+
 HTTP_SERVER.get("/view/booked", (req,res) =>{
     const bookedRooms = bookings.map((booking) => 
     {
@@ -133,6 +141,7 @@ HTTP_SERVER.get("/view/booked", (req,res) =>{
     res.status(201).json(bookedRooms);
 })
 
+// List of all customers who booked room
 
 HTTP_SERVER.get('/customers', (req, res) => {
     const customerBookings = customers.map(custo => {
@@ -147,6 +156,8 @@ HTTP_SERVER.get('/customers', (req, res) => {
    
     res.status(200).json(customerBookings);
   });
+
+  //how many times the user booked the room
 
 HTTP_SERVER.get('/customer/:name', (req, res) => {
     const { name } = req.params;
