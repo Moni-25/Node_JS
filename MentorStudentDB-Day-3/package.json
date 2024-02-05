@@ -1,0 +1,11 @@
+{
+  "name": "mentorstudentdb",
+  "version": "1.0.0",
+  "description": "mentor and student assigning database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Moni",
+  "license": "MIT"
+}
