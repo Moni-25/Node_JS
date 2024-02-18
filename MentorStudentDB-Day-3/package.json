@@ -4,8 +4,18 @@
   "description": "mentor and student assigning database",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
   },
   "author": "Moni",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.4",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.3",
+    "save": "^2.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
 }
