@@ -4,8 +4,8 @@ async function connectDatabase()
 {
     try{
         const response = await mongoose.connect(
-            "mongodb://localhost:27017/studentmentordb"
-            // "mongodb+srv://Monica25:jS4hxxsNMwMhyy4e@mentordb.deugo1z.mongodb.net/mentorstudentDB"
+            // "mongodb://localhost:27017/studentmentordb"
+            "mongodb+srv://Monica25:jS4hxxsNMwMhyy4e@mentordb.deugo1z.mongodb.net/mentorstudentDB"
             );
         //console.log(response);
         if(response.connections.length > 0)
