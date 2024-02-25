@@ -8,7 +8,7 @@ const { connectDatabase } = require("./dbConfigure");
 connectDatabase();
 HTTP_SERVER.use(bodyParser.json());
 
-HTTP_SERVER.listen((port), hostname , ()=>{
+HTTP_SERVER.listen((port), ()=>{
     console.log(`Server Started On http://localhost:${port}`);
 })
 
